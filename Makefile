@@ -25,6 +25,8 @@ output/primary_model.png: code/regression_analysis.R data/heart.csv
 output/secondary_model.png: code/regression_analysis.R data/heart.csv
 	Rscript code/regression_analysis.R && touch output/secondary_model.png
 
+install:
+    Rscript -e 'if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv"); renv::restore()'
 
 .PHONY: clean
 clean:

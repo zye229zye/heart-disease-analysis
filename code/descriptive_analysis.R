@@ -17,3 +17,4 @@ gt_table <- as_gt(summary_table)
 
 # Save the table as an image
 gt::gtsave(gt_table, filename = "output/table1.png")
+
